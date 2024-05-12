@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Recoleta Black";
+  src: url("./Recoleta-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: inherit;
+  letter-spacing: inherit;
+  outline: none;
+  text-decoration: none;
+  cursor: inherit;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+body {
+  background-color: #fff;
+  font-family: sans-serif;
+  color: #444;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Recoleta Black", sans-serif;
+  font-size: 6vw; /* Tamaño de fuente responsivo */
+  margin-bottom: 1rem;
+  color: #211e1d;
+}
+
+.slogan {
+  font-family: "Recoleta Black", sans-serif;
+  font-size: 3vw; /* Tamaño de fuente responsivo */
+  margin-bottom: 4rem;
+  color: #ff7e3e;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Para envolver los elementos en pantallas pequeñas */
+}
+
+input[type="text"] {
+  font-size: 2vw; /* Tamaño de fuente responsivo */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem; /* Separación entre los campos */
+  width: 100%; /* Ancho completo en pantallas pequeñas */
+  max-width: 20rem; /* Ancho máximo para evitar que se estire demasiado */
+}
+
+button[type="submit"] {
+  font-size: 2vw; /* Tamaño de fuente responsivo */
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: #fff;
+  background-color: #ff7e3e;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 1rem; /* Separación entre el campo y el botón */
+}
+
+button[type="submit"]:hover {
+  background-color: #f35627;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 8vw;
+  }
+
+  .slogan {
+    font-size: 4vw;
+  }
+
+  input[type="text"] {
+    font-size: 4vw;
+    max-width: 15rem;
+  }
+
+  button[type="submit"] {
+    font-size: 4vw;
+    max-width: 15rem;
+  }
+}
